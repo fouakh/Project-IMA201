@@ -45,11 +45,22 @@ def lab_to_rgb(imLabCorrec):
     """Convert a corrected Lab image back to RGB."""
     return np.exp(imLabCorrec @ np.linalg.inv(Tpca.T)) @ np.linalg.inv(Txyz.T @ Tlms.T)
 
-def correct_gray_world(imLab):
+def gray_world_alpha_beta(imLab):
     """Apply gray-world correction to the chromatic channels α and β."""
     # imLab[:, :, 0] = histogram_equal(imLab[:, :, 0])
     imLab[:, :, 1] -= np.mean(imLab[:, :, 1])  # α correction
     imLab[:, :, 2] -= np.mean(imLab[:, :, 2])  # β correction
+
+def white_patches_alpha_beta(imLab):
+    num_pixels = imLab[:, :, 0].size
+    num_brightest_pixels = int(num_pixels * 0.02)  
+    bright_index = np.argsort(imLab[:, :, 0], axis=None)[-num_brightest_pixels:]
+
+    mean_a = np.mean(imLab[:, :, 1].flatten()[bright_index])
+    mean_b = np.mean(imLab[:, :, 2].flatten()[bright_index])
+
+    imLab[:, :, 1] -= mean_a 
+    imLab[:, :, 2] -= mean_b
 
 # Main function to process the image
 def process_underwater_image(image_path):
@@ -72,7 +83,8 @@ def process_underwater_image(image_path):
     # display_Lab(imLab)
 
     # Step 2: Apply gray-world correction in Lab space
-    correct_gray_world(imLab)
+    # gray_world_alpha_beta(imLab)
+    white_patches_alpha_beta(imLab)
 
     # display_Lab(imLab)
 
