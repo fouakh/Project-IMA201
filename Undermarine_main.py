@@ -19,7 +19,8 @@ def main(on):
 
                 if im is not None:
                     # Apply the underwater correction (gray-world correction)
-                    imc = gray_world_correction_BGR(im)
+                    imc = process_underwater_image(file_path)
+                    # imc = gray_world_correction_BGR(im)
 
                     # Save the corrected image with 'EX_' prefix
                     save_image(imc, filename, 'Images')
