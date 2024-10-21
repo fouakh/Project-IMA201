@@ -1,7 +1,11 @@
+import os
 import numpy as np
 import cv2
-import os
 import matplotlib.pyplot as plt
+
+########################################################################################
+# Lab Correction
+########################################################################################
 
 # Transformation matrices
 Txyz = np.array([[0.5141, 0.3239, 0.1604],
@@ -22,76 +26,103 @@ Tpca2 = np.array([[1, 1, 1],
 
 Tpca = Tpca1 @ Tpca2
 
+
 # Helper functions to transform between color spaces
+
 def adjust_gamma(image, gamma=1.0):
     """Apply gamma correction to an image."""
     invGamma = 1.0 / gamma
     table = np.array([((i / 255.0) ** invGamma) * 255 for i in np.arange(256)]).astype("uint8")
     return cv2.LUT(image, table)
 
+
 def rgb_to_xyz(im):
     """Convert an RGB image to XYZ color space."""
     return im @ Txyz.T
+
 
 def xyz_to_lms(im):
     """Convert an XYZ image to LMS color space."""
     return im @ Tlms.T
 
+
 def lms_to_lab(im):
     """Convert an LMS image to Lab color space using PCA transformation."""
     return np.log(im + 1e-6) @ Tpca2.T @ Tpca1.T
+
 
 def lab_to_rgb(imLabCorrec):
     """Convert a corrected Lab image back to RGB."""
     return np.exp(imLabCorrec @ np.linalg.inv(Tpca.T)) @ np.linalg.inv(Txyz.T @ Tlms.T)
 
-def gray_world_alpha_beta(imLab):
-    """Apply gray-world correction to the chromatic channels α and β."""
-    # imLab[:, :, 0] = histogram_equal(imLab[:, :, 0])
-    imLab[:, :, 1] -= np.mean(imLab[:, :, 1])  # α correction
-    imLab[:, :, 2] -= np.mean(imLab[:, :, 2])  # β correction
 
-def white_patches_alpha_beta(imLab):
+def gray_world_lab(imLab):
+    """Apply gray-world correction to the chromatic channels α and β."""
+    imLab[:, :, 1] -= np.mean(imLab[:, :, 1])
+    imLab[:, :, 2] -= np.mean(imLab[:, :, 2])
+
+
+def white_patches_lab(imLab, percent=2.0):
+    """Apply white-patches correction to the α and β channels based on the brightest 2% of pixels."""
     num_pixels = imLab[:, :, 0].size
-    num_brightest_pixels = int(num_pixels * 0.02)  
+    num_brightest_pixels = int(num_pixels * percent / 100)  
     bright_index = np.argsort(imLab[:, :, 0], axis=None)[-num_brightest_pixels:]
 
     mean_a = np.mean(imLab[:, :, 1].flatten()[bright_index])
     mean_b = np.mean(imLab[:, :, 2].flatten()[bright_index])
 
-    imLab[:, :, 1] -= mean_a 
+    imLab[:, :, 1] -= mean_a
     imLab[:, :, 2] -= mean_b
 
-# Main function to process the image
-def process_underwater_image(image_path):
-    """Process an underwater image using gray-world correction."""
-    # Load the image
-    im = cv2.imread(image_path)
-    im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+
+def spacial_white_patches_lab(imLab, kernel_size=5):
+    """Apply white-patches correction to the α and β channels using a local mean filter."""
+    if kernel_size % 2 == 0:
+        raise ValueError("Kernel size must be odd.")
     
-    # Apply gamma correction
+    kernel = np.ones((kernel_size, kernel_size), np.float32) / (kernel_size ** 2)
+    filtered_L = cv2.filter2D(imLab[:, :, 0], -1, kernel)
+    max_idx = np.unravel_index(np.argmax(filtered_L), filtered_L.shape)
+    
+    half_kernel = kernel_size // 2
+    y_min = max(max_idx[0] - half_kernel, 0)
+    y_max = min(max_idx[0] + half_kernel + 1, imLab.shape[0])
+    x_min = max(max_idx[1] - half_kernel, 0)
+    x_max = min(max_idx[1] + half_kernel + 1, imLab.shape[1])
+    
+    alpha_region = imLab[y_min:y_max, x_min:x_max, 1]
+    beta_region = imLab[y_min:y_max, x_min:x_max, 2]
+    
+    alpha_mean = np.mean(alpha_region)
+    beta_mean = np.mean(beta_region)
+
+    imLab[:, :, 1] -= alpha_mean 
+    imLab[:, :, 2] -= beta_mean   
+
+
+########################################################################################
+# Main function for Lab Correction
+########################################################################################
+
+def process_underwater_image_lab(imBGR):
+    """Process an underwater image using gray-world correction."""
+    im = cv2.cvtColor(imBGR, cv2.COLOR_BGR2RGB)
     im_gamma = adjust_gamma(im, gamma=1)
 
-    # Normalize the image
     im_norm = im_gamma.astype(np.float32) / 255.0
 
-    # Step 1: RGB to XYZ to LMS to Lab
     imXYZ = rgb_to_xyz(im_norm)
     imLMS = xyz_to_lms(imXYZ)
     imLab = lms_to_lab(imLMS)
 
-    # display_Lab(imLab)
+    spacial_white_patches_lab(imLab)
+    # white_patches_lab(imLab)
+    # gray_world_lab(imLab)
 
-    # Step 2: Apply gray-world correction in Lab space
-    # gray_world_alpha_beta(imLab)
-    white_patches_alpha_beta(imLab)
-
-    # display_Lab(imLab)
-
-    # Step 3: Convert corrected Lab back to RGB
     imLabInv = (np.clip(lab_to_rgb(imLab), 0, 1) * 255).astype(np.uint8)
 
     return cv2.cvtColor(imLabInv, cv2.COLOR_RGB2BGR)
+
 
 def histogram_equal(channel):
     """Equalize histogram of a channel after converting from log space."""
@@ -103,7 +134,12 @@ def histogram_equal(channel):
 
     return equalized_channel
 
-def gray_world_correction_BGR(image):
+
+########################################################################################
+# BGR Correction
+########################################################################################
+
+def gray_world_BGR(image):
     """Apply gray-world correction to an image in BGR format."""
     B, G, R = cv2.split(image)
     R_mean, G_mean, B_mean = np.mean(R), np.mean(G), np.mean(B)
@@ -115,7 +151,8 @@ def gray_world_correction_BGR(image):
 
     return corrected_image
 
-def white_patches_correction_BGR(image):
+
+def white_patches_BGR(image):
     """Apply white patches correction to an image in BGR format."""
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     num_patch_pixels = int(0.02 * gray_image.size)
@@ -127,6 +164,11 @@ def white_patches_correction_BGR(image):
     corrected_image = np.clip(image * correction_factor, 0, 255).astype(np.uint8)
 
     return corrected_image
+
+
+########################################################################################
+# Utility Functions
+########################################################################################
 
 def save_image(image, input_path, output_path):
     """Save the corrected image with the prefix 'EX' in the output directory."""
@@ -150,13 +192,12 @@ def delete_images(directory):
 
 def display_Lab(lab_image):
     """Display the L, α, and β channels."""
-    l = lab_image[:, :, 0].flatten()      # L channel
-    alpha = lab_image[:, :, 1].flatten()  # α channel
-    beta = lab_image[:, :, 2].flatten()   # β channel
+    l = lab_image[:, :, 0].flatten()
+    alpha = lab_image[:, :, 1].flatten()
+    beta = lab_image[:, :, 2].flatten()
 
     fig, ax = plt.subplots(1, 2, figsize=(14, 6))
 
-    # Scatter plot of α vs β
     ax[0].scatter(alpha, beta, s=1, color='blue', alpha=0.5)
     ax[0].set_title('αβ Diagram')
     ax[0].set_xlabel('α (green-red component)')
@@ -165,7 +206,6 @@ def display_Lab(lab_image):
     ax[0].set_ylim(np.min(beta), np.max(beta))
     ax[0].grid(True)
 
-    # Histogram of the L channel
     ax[1].hist(l, bins=50, color='gray', alpha=0.7)
     ax[1].set_title('Luminance (L) Histogram')
     ax[1].set_xlabel('Luminance Value')

@@ -1,36 +1,37 @@
+import argparse
 import os
 import cv2
-import argparse
 from Undermarine_lib import *
 
-def main(on):
-    """Main function to process or delete images in the 'Images' directory."""
-    if not on:
-        # Delete images with 'EX' prefix
-        delete_images('Images')
-    else:
-        # Process images in the 'Images' directory
-        for filename in os.listdir('Images'):
-            file_path = os.path.join('Images', filename)
+def main(on, directory):
+    """Process or delete images in the specified directory (not 'Images')."""
 
-            # Check for valid image extensions
+    os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
+
+    if directory == 'Images':
+        raise ValueError("The directory cannot be 'Images' ")
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    if not on:
+        delete_images(directory)
+    else:
+        for filename in os.listdir("Images"):
+            file_path = os.path.join("Images", filename)
+
             if filename.endswith(('.jpg', '.jpeg', '.png', '.bmp', '.tif', '.tiff')):
-                # Load the image
                 im = cv2.imread(file_path)
 
                 if im is not None:
-                    # Apply underwater correction
-                    imc = process_underwater_image(file_path)
-                    # imc = white_patches_correction_BGR(im)
-                    # imc = gray_world_correction_BGR(im)
-
-                    # Save the corrected image with 'EX_' prefix
-                    save_image(imc, filename, 'Images')
+                    imc = process_underwater_image_lab(im)
+                    save_image(imc, filename, directory)
                 else:
                     print(f"Error: Unable to load image {filename}")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Process or delete images in the 'Images' directory")
+    parser = argparse.ArgumentParser(description="Process or delete images in a specified directory.")
     parser.add_argument('--on', action='store_true', help='Enable image correction and saving')
+    parser.add_argument('-d', '--directory', type=str, required=True, help='Directory for processing or deleting images (cannot be "Images")')
     args = parser.parse_args()
-    main(on=args.on)
+    main(on=args.on, directory=args.directory)
