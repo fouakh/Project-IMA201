@@ -6,8 +6,6 @@ from Undermarine_lib import *
 def main(on, directory):
     """Process or delete images in the specified directory (not 'Images')."""
 
-    os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
-
     if directory == 'Images':
         raise ValueError("The directory cannot be 'Images' ")
 
@@ -24,7 +22,8 @@ def main(on, directory):
                 im = cv2.imread(file_path)
 
                 if im is not None:
-                    imc = process_underwater_image_lab(im)
+                    # imc = process_underwater_image(im, "BGR", "GW")
+                    imc = ace_algorithm(im)
                     save_image(imc, filename, directory)
                 else:
                     print(f"Error: Unable to load image {filename}")
