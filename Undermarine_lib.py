@@ -91,6 +91,9 @@ def gray_world_lab(imLab):
     # Apply gray-world correction to the chromatic channels a and b
     imLab[:, :, 1] -= np.mean(imLab[:, :, 1])  
     imLab[:, :, 2] -= np.mean(imLab[:, :, 2])  
+    L = (np.clip(np.exp(imLab[:, :, 0]), 0, 1) * 255).astype(np.uint8)
+    L = ace_enhance_image_poly_channel(L, 7, 11, "1/r").astype(np.float32) / 255.0 
+    imLab[:, :, 0] = np.log(L + 1e-06)
 
 
 def white_patches_lab(imLab, percent=2.0):
@@ -146,12 +149,16 @@ def process_underwater_image(imBGR, color_space="Lab", hyp="GW"):
         imLMS = xyz_to_lms(imXYZ)
         imLab = lms_to_lab(imLMS)  
 
+        # display_lab(imLab)
+
         if hyp == "GW":
             gray_world_lab(imLab) 
         elif hyp == "WP":
             white_patches_lab(imLab)
         elif hyp == "SWP":
             spacial_white_patches_lab(imLab)
+
+        # display_lab(imLab)
 
         imLabInv = (np.clip(lab_to_rgb(imLab), 0, 1) * 255).astype(np.uint8)
 
@@ -477,7 +484,7 @@ def delete_images(directory):
 
 def display_lab(lab_image):
     # Display the L, a, and b channels of a Lab image."""
-    l = lab_image[:, :, 0].flatten()  
+    l = lab_image[:, :, 0].flatten()
     alpha = lab_image[:, :, 1].flatten()  
     beta = lab_image[:, :, 2].flatten()
 
