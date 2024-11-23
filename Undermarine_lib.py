@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import cv2
+from scipy.special import comb 
 import matplotlib.pyplot as plt
 
 ########################################################################################
@@ -178,12 +179,276 @@ def histogram_equal(channel):
 
 
 ########################################################################################
-# Fast Implementation of ACE Algorithm
+# Fast Implementation of ACE Algorithm Using Polynomes
 ########################################################################################
 
-def ace_algorithm(image):
-    # Apply the ACE algorithm for color correction."""
-    pass
+def get_slope_coeffs(alpha, degree):
+    if degree == 3:
+        slope_coeff_3 = [
+            # Coefficients for different alpha values, from 1 to 8
+            [1.00000000, 0.00000000], 
+            [1.73198742, -0.69610145],
+            [2.13277255, -1.21872717],
+            [2.38176185, -1.52677041],
+            [2.59620299, -1.79723305],
+            [2.78241030, -2.03475483],
+            [2.94527479, -2.24401889],
+            [3.08812041, -2.42848207],
+            [3.21463262, -2.59244566],
+            [3.32706695, -2.73856141],
+            [3.42747864, -2.86932869],
+            [3.51818929, -2.98766105],
+            [3.60000335, -3.09453402],
+            [3.67436451, -3.19178134],
+            [3.74278641, -3.28134699],
+        ]
+        index_alpha = int(2*alpha + 0.5) - 2
+        return slope_coeff_3[index_alpha]
+
+    elif degree == 5:
+        slope_coeff_5 = [
+            [1.00000000, 0.00000000, -0.00000000],
+            [1.66723389, -0.36136104, -0.34712113],
+            [2.35346531, -2.02651073, 0.61570501],
+            [2.94915439, -4.05195249, 2.10249240],
+            [3.29516608, -5.31192181, 3.10222415],
+            [3.56410808, -6.24932127, 3.80525524],
+            [3.80968824, -7.12768947, 4.47258157],
+            [4.03354356, -7.94288855, 5.09736922],
+            [4.23878049, -8.70009742, 5.68134357],
+            [4.42702610, -9.40144877, 6.22474375],
+            [4.60005346, -10.05098474, 6.72977516],
+            [4.76014304, -10.65555033, 7.20114304],
+            [4.90798649, -11.21656584, 7.63952738],
+            [5.04473456, -11.73752961, 8.04735155],
+            [5.17324675, -12.22873575, 8.43246007]
+        ]
+        index_alpha = int(2*alpha + 0.5) - 2
+        return slope_coeff_5[index_alpha]
+
+    elif degree == 7:
+        slope_coeff_7 = [
+            [1.00000000, -0.00000000, 0.00000000, -0.00000000],
+            [1.31850776, 1.88579394, -4.51838279, 2.29888190],
+            [2.23530932, -0.79002085, -2.57240008, 2.17163120],
+            [2.93948292, -3.90836546, 1.60923562, 0.41682763],
+            [3.56062038, -7.45667362, 7.38064952, -2.42466148],
+            [4.15568002, -11.88947420, 16.25427808, -7.56136494],
+            [4.46743293, -13.98559715, 20.16395287, -9.72835778],
+            [4.74662438, -15.87900286, 23.66636188, -11.64087875],
+            [5.00772291, -17.69353071, 27.06459723, -13.51030535],
+            [5.25172323, -19.42100742, 30.32965344, -15.31627848],
+            [5.48006949, -21.06112317, 33.45141064, -17.05013308],
+            [5.69490550, -22.62194425, 36.43860655, -18.71459349],
+            [5.89647326, -24.09995981, 39.27978104, -20.30174825],
+            [6.08549612, -25.49650047, 41.97392281, -21.80988331],
+            [6.26567751, -26.83613964, 44.56594166, -23.26333522]
+        ]
+        index_alpha = int(2*alpha + 0.5) - 2
+        return slope_coeff_7[index_alpha]
+
+    elif degree == 9:
+        slope_coeff_9 = [
+            [1.00000000, -0.00000000, -0.00000000, 0.00000000, -0.00000000],
+            [1.33743875, 1.55213754, -3.02825657, -0.12350511, 1.28325061],
+            [1.85623249, 3.82397125, -19.70879455, 26.15510902, -11.15375327],
+            [2.79126397, -1.30687551, -10.57298680, 20.02623286, -9.98284231],
+            [3.51036396, -6.31644952, 0.92439798, 9.32834829, -6.50264005],
+            [4.15462973, -11.85851451, 16.03418150, -7.07985902, -0.31040920],
+            [4.76270090, -18.23743983, 36.10529118, -31.35677926, 9.66532431],
+            [5.34087782, -25.67018163, 63.87617747, -70.15437134, 27.66951403],
+            [5.64305564, -28.94026159, 74.52401661, -83.54012582, 33.39343065],
+            [5.92841230, -32.11619291, 85.01764165, -96.84966316, 39.11863693],
+            [6.19837979, -35.18789052, 95.28157108, -109.95601312, 44.78177264],
+            [6.45529995, -38.16327397, 105.31193936, -122.83169063, 50.36462504],
+            [6.69888108, -41.02503190, 115.02784036, -135.35603880, 55.81014424],
+            [6.92966632, -43.76867314, 124.39645141, -147.47363378, 61.09053024],
+            [7.15179080, -46.43557440, 133.54648929, -159.34156394, 66.27157886]
+        ]
+        index_alpha = int(2*alpha + 0.5) - 2
+        return slope_coeff_9[index_alpha]
+
+    elif degree == 11:
+        slope_coeff_11 = [
+            [1.00000000, 0.00000000, -0.00000000, 0.00000000, -0.00000000, 0.00000000],
+            [1.66678889, -3.86308014, 24.49259996, -60.31838443, 60.41749474, -21.39625618],
+            [1.72148233, 5.57093260, -27.63510699, 42.17244497, -25.90619413, 5.05129251],
+            [2.44812002, 5.44250700, -51.76972915, 122.80044756, -120.64444655, 42.75429141],
+            [3.34207384, -1.88198559, -31.55985305, 99.72042171, -110.92549331, 42.35008523],
+            [4.07315446, -9.21949162, -6.32221899, 61.04544659, -83.92082003, 35.39862577],
+            [4.73684644, -17.20876074, 25.84450290, 3.70364719, -37.08075727, 21.06386836],
+            [5.35950086, -26.04602434, 66.00030136, -75.00728398, 32.49211360, -1.73763297],
+            [5.96254045, -36.16972228, 118.20339443, -187.72895027, 140.02594416, -39.23184984],
+            [6.51682984, -46.98047500, 181.98817630, -342.88822007, 304.46069970, -102.16048673],
+            [6.81927870, -51.86023914, 206.63033666, -395.90039101, 355.40642199, -120.17357682],
+            [7.10938299, -56.65550129, 231.15377258, -449.06355949, 406.75991367, -138.39740356],
+            [7.38624375, -61.32373225, 255.27181537, -501.66899832, 457.78188701, -156.55607004],
+            [7.65057013, -65.85455478, 278.87482808, -553.40651672, 508.12674394, -174.51544666],
+            [7.90659139, -70.30420539, 302.21512501, -604.77762046, 558.24999183, -192.42993273]
+        ]
+        index_alpha = int(2*alpha + 0.5) - 2
+        return slope_coeff_11[index_alpha]
+    
+    else:
+        raise ValueError(f"Unsupported degree: {degree}. Supported degrees are 3, 5, 7, 9, 11.")
+
+
+def compute_poly_coeffs(alpha, degree):
+    slope_coeffs = get_slope_coeffs(alpha, degree)
+    poly_coeffs = np.zeros((degree + 1, degree + 1)) 
+
+    for n in range(degree + 1):
+        m_start = n + 1 if n % 2 == 0 else n
+        for m in range(m_start, degree + 1, 2):  
+            binomial = comb(m, n) 
+            slope_index = (m - 1) // 2
+            alternating_sign = -1 if (m - n + 1) % 2 else 1  
+
+            poly_coeffs[n, m] = (
+                alternating_sign * slope_coeffs[slope_index] * binomial
+            )
+
+    return poly_coeffs
+
+def ace_enhance_image_poly(f, alpha, degree, omega_string):
+
+    u = np.zeros_like(f)
+    
+    for channel in range(3):
+        u[:,:,channel] = ace_enhance_image_poly_channel(f[:,:,channel], alpha, degree, omega_string)
+
+    return u
+
+def ace_enhance_image_poly_channel(f, alpha, degree, omega_string):
+    f = f.astype(np.float64) / 255.0
+
+    height, width = f.shape
+    u = np.zeros_like(f)
+    poly_coeffs = compute_poly_coeffs(alpha, degree)
+
+    temp_sqr = f ** 2
+    a = poly_coeffs[0, degree]
+
+    for m in range(degree - 2, -1, -2):
+        a = a * temp_sqr + poly_coeffs[0, m]
+
+    dest = a * f
+    u = dest.copy()
+
+    for n in range(1, degree + 1):
+        blurred = np.power(f, n)
+        omega = compute_omega(width, height, omega_string)
+        res = cv2.filter2D(blurred, -1, omega, borderType=cv2.BORDER_REFLECT)
+
+        temp_sqr = f ** 2
+        a = poly_coeffs[n, degree]
+        m = degree
+
+        while m - n >= 2:
+            m -= 2
+            a = a * temp_sqr + poly_coeffs[n, m]
+
+        if n % 2 == 0:
+            a *= f
+
+        res *= a
+        u += res
+
+    u = stretch(u)
+    return u
+
+def compute_omega(width, height, omega_string):
+
+    omega = np.zeros((height, width))
+    if omega_string is None or omega_string == "1/r":
+        # omega = 1/sqrt(x^2 + y^2)
+        for y in range(height):
+            for x in range(width):
+                omega[y, x] = 0 if (x == 0 and y == 0) else 1.0 / np.sqrt(x * x + y * y)
+    elif omega_string == "1":
+        # omega = 1
+        for y in range(height):
+            for x in range(width):
+                omega[y, x] = 1.0
+    elif len(omega_string) >= 3 and omega_string[0] == 'G' and omega_string[1] == ':':
+        # omega = Gaussian
+        sigma = float(omega_string[2:])
+        
+        if sigma <= 0:
+            return None 
+        
+        for y in range(height):
+            for x in range(width):
+                omega[y, x] = np.exp(-(x * x + y * y) / (2 * sigma * sigma))
+    else:
+        return None  
+    
+    omega /= np.sum(omega)
+    
+    return omega
+
+def stretch(image):
+    dest = image
+
+    min_val = np.min(dest)
+    max_val = np.max(dest)
+
+    if min_val < max_val:
+        scale = max_val - min_val
+        dest[:] = ((dest - min_val) / scale) * 255
+
+    return image.astype(np.uint8)
+
+# def ace_enhance_image_poly_channel(f, alpha, degree, omega_string):
+
+#     f = f.astype(np.float64) / 255.0
+
+#     height, width = f.shape
+#     num_pixels = width * height
+
+#     u = np.zeros_like(f)
+#     dest = np.zeros(num_pixels)
+#     poly_coeffs = compute_poly_coeffs(alpha, degree)
+    
+#     src = f.flatten().copy()
+#     temp_sqr = src ** 2
+#     a = poly_coeffs[0, degree]
+
+#     for m in range(degree - 2, -1, -2):
+#         a = a * temp_sqr + poly_coeffs[0, m]
+
+#     dest = a * src
+
+#     u = dest.reshape((height, width))
+
+#     for n in range(1, degree+1):
+
+#         src = f.flatten().copy()
+#         blurred = np.power(src, n)
+
+#         res = convolve(blurred, compute_omega(width, height, omega_string))
+
+#         for i in range(num_pixels):
+#             Temp = src[i]
+#             TempSqr = Temp ** 2
+#             a = poly_coeffs[n, degree]
+#             m = degree
+
+#             while m - n >= 2:
+#                 m -= 2
+#                 a = a * TempSqr + poly_coeffs[n, m] 
+
+#             if n % 2 == 0:
+#                 a *= Temp
+
+#             res[i] *= a
+
+#         dest += res
+#         u = dest.reshape((height, width)) 
+
+#     u = stretch(u)
+
+#     return u
 
 
 ########################################################################################

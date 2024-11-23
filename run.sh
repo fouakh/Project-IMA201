@@ -14,9 +14,9 @@ if [ "$DIRECTORY" = "Images" ]; then
 fi
 
 if [ "$MODE" = "on" ]; then
-  python -B Undermarine_main.py --on -d "$DIRECTORY"
+  python -B Undermarine_main.py -s "on" -d "$DIRECTORY"
 elif [ "$MODE" = "off" ]; then
-  python -B Undermarine_main.py --off -d "$DIRECTORY"
+  python -B Undermarine_main.py -s "off" -d "$DIRECTORY"
 else
   echo "Invalid mode. Use 'on' to process images or 'off' to delete them."
   exit 1
