@@ -1,0 +1,16 @@
+\BOOKMARK [2][]{Outline0.1}{\311tat de l'Art du Traitement des Images Sous-Marines}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.3}{Introduction}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.5}{M\351thodes de Restauration d'Image}{Outline0.1}% 3
+\BOOKMARK [3][]{Outline0.1.3.6}{M\351thodes d'Am\351lioration d'Image}{Outline0.1}% 4
+\BOOKMARK [3][]{Outline0.1.4.7}{M\351thodes Supervis\351es}{Outline0.1}% 5
+\BOOKMARK [2][]{Outline0.2}{Correction des Couleurs \340 l'Aide de l'Espace RGB}{}% 6
+\BOOKMARK [3][]{Outline0.2.1.9}{Hypoth\350se du Monde Gris}{Outline0.2}% 7
+\BOOKMARK [3][]{Outline0.2.2.12}{Hypoth\350se des White Patches}{Outline0.2}% 8
+\BOOKMARK [2][]{Outline0.3}{Correction des Couleurs \340 l'Aide de l'Espace \040l}{}% 9
+\BOOKMARK [3][]{Outline0.3.1.17}{Conversion dans l'Espace l}{Outline0.3}% 10
+\BOOKMARK [3][]{Outline0.3.2.18}{Correction et Am\351lioration dans l'Espace \040l}{Outline0.3}% 11
+\BOOKMARK [2][]{Outline0.4}{M\351thode ACE : \311galisation Automatique des Couleurs}{}% 12
+\BOOKMARK [3][]{Outline0.4.1.28}{Mod\350le et Formulation Math\351matique}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.2.30}{Fonction Pente Polynomiale}{Outline0.4}% 14
+\BOOKMARK [3][]{Outline0.4.3.34}{Impl\351mentation pour la Correction des Images Sous-marines}{Outline0.4}% 15
+\BOOKMARK [2][]{Outline0.5}{Conclusion}{}% 16

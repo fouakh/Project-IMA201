@@ -1,0 +1,17 @@
+\select@language {french}
+\beamer@sectionintoc {1}{\IeC {\'E}tat de l'Art du Traitement des Images Sous-Marines}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{M\IeC {\'e}thodes de Restauration d'Image}{5}{0}{1}
+\beamer@subsectionintoc {1}{3}{M\IeC {\'e}thodes d'Am\IeC {\'e}lioration d'Image}{6}{0}{1}
+\beamer@subsectionintoc {1}{4}{M\IeC {\'e}thodes Supervis\IeC {\'e}es}{7}{0}{1}
+\beamer@sectionintoc {2}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace RGB}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Hypoth\IeC {\`e}se du Monde Gris}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{Hypoth\IeC {\`e}se des White Patches}{12}{0}{2}
+\beamer@sectionintoc {3}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace \( l\alpha \beta \)}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Conversion dans l'Espace $l\alpha \beta $}{17}{0}{3}
+\beamer@subsectionintoc {3}{2}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{18}{0}{3}
+\beamer@sectionintoc {4}{M\IeC {\'e}thode ACE : \IeC {\'E}galisation Automatique des Couleurs}{26}{0}{4}
+\beamer@subsectionintoc {4}{1}{Mod\IeC {\`e}le et Formulation Math\IeC {\'e}matique}{28}{0}{4}
+\beamer@subsectionintoc {4}{2}{Fonction Pente Polynomiale}{30}{0}{4}
+\beamer@subsectionintoc {4}{3}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}{34}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{38}{0}{5}

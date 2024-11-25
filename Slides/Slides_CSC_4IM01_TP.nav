@@ -1,0 +1,107 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{\IeC {\'E}tat de l'Art du Traitement des Images Sous-Marines}{3}{\IeC {\'E}tat de l'Art du Traitement des Images Sous-Marines}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Introduction}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Introduction}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {1}{1}{2}{4/4}{Introduction}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{M\IeC {\'e}thodes de Restauration d'Image}}\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\slideentry {1}{2}{1}{5/5}{M\IeC {\'e}thodes de Restauration d'Image}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{6}{M\IeC {\'e}thodes d'Am\IeC {\'e}lioration d'Image}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {1}{3}{1}{6/6}{M\IeC {\'e}thodes d'Am\IeC {\'e}lioration d'Image}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{7}{M\IeC {\'e}thodes Supervis\IeC {\'e}es}}\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {1}{4}{1}{7/7}{M\IeC {\'e}thodes Supervis\IeC {\'e}es}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\sectionentry {2}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace RGB}{8}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace RGB}{0}}
+\headcommand {\beamer@sectionpages {3}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {2}{0}{1}{8/8}{}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{9}{Hypoth\IeC {\`e}se du Monde Gris}}\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\slideentry {2}{1}{1}{9/9}{Hypoth\IeC {\`e}se du Monde Gris}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {2}{1}{2}{10/10}{Hypoth\IeC {\`e}se du Monde Gris}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {2}{1}{3}{11/11}{Hypoth\IeC {\`e}se du Monde Gris}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{12}{Hypoth\IeC {\`e}se des White Patches}}\headcommand {\beamer@subsectionpages {9}{11}}
+\headcommand {\slideentry {2}{2}{1}{12/12}{Hypoth\IeC {\`e}se des White Patches}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {2}{2}{2}{13/13}{Hypoth\IeC {\`e}se des White Patches}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {2}{2}{3}{14/14}{Hypoth\IeC {\`e}se des White Patches}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\sectionentry {3}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace \( l\alpha \beta \)}{15}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@sectionpages {8}{14}}
+\headcommand {\beamer@subsectionpages {12}{14}}
+\headcommand {\slideentry {3}{0}{1}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {3}{0}{2}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{17}{Conversion dans l'Espace $l\alpha \beta $}}\headcommand {\beamer@subsectionpages {15}{16}}
+\headcommand {\slideentry {3}{1}{1}{17/17}{Conversion dans l'Espace $l\alpha \beta $}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{18}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}}\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\slideentry {3}{2}{1}{18/18}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {3}{2}{2}{19/19}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {3}{2}{3}{20/20}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {3}{2}{4}{21/21}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {3}{2}{5}{22/22}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {3}{2}{6}{23/23}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {3}{2}{7}{24/24}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {3}{2}{8}{25/25}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\sectionentry {4}{M\IeC {\'e}thode ACE : \IeC {\'E}galisation Automatique des Couleurs}{26}{M\IeC {\'e}thode ACE : \IeC {\'E}galisation Automatique des Couleurs}{0}}
+\headcommand {\beamer@sectionpages {15}{25}}
+\headcommand {\beamer@subsectionpages {18}{25}}
+\headcommand {\slideentry {4}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {4}{0}{2}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{28}{Mod\IeC {\`e}le et Formulation Math\IeC {\'e}matique}}\headcommand {\beamer@subsectionpages {26}{27}}
+\headcommand {\slideentry {4}{1}{1}{28/28}{Mod\IeC {\`e}le et Formulation Math\IeC {\'e}matique}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {4}{1}{2}{29/29}{Mod\IeC {\`e}le et Formulation Math\IeC {\'e}matique}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{30}{Fonction Pente Polynomiale}}\headcommand {\beamer@subsectionpages {28}{29}}
+\headcommand {\slideentry {4}{2}{1}{30/30}{Fonction Pente Polynomiale}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {4}{2}{2}{31/31}{Fonction Pente Polynomiale}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {4}{2}{3}{32/32}{Fonction Pente Polynomiale}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {4}{2}{4}{33/33}{Fonction Pente Polynomiale}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{34}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}}\headcommand {\beamer@subsectionpages {30}{33}}
+\headcommand {\slideentry {4}{3}{1}{34/34}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {4}{3}{2}{35/35}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {4}{3}{3}{36/36}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {4}{3}{4}{37/37}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\sectionentry {5}{Conclusion}{38}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {26}{37}}
+\headcommand {\beamer@subsectionpages {34}{37}}
+\headcommand {\slideentry {5}{0}{1}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@partpages {1}{38}}
+\headcommand {\beamer@subsectionpages {38}{38}}
+\headcommand {\beamer@sectionpages {38}{38}}
+\headcommand {\beamer@documentpages {38}}
+\headcommand {\def \inserttotalframenumber {38}}

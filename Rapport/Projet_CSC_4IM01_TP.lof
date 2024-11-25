@@ -1,0 +1,11 @@
+\select@language {french}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces R\IeC {\'e}sultats de la correction RGB (avec l'hypoth\IeC {\`e}se du monde gris) sur des images sous-marines}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces R\IeC {\'e}sultats de la correction RGB (avec l'hypoth\IeC {\`e}se des white patches) sur des images sous-marines}}{6}{figure.2.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces R\IeC {\'e}sultats de la correction $l\alpha \beta $ (avec l'hypoth\IeC {\`e}se du monde gris) sur des images sous-marines}}{8}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme $\alpha \beta $ et Histogramme de la Luminance avant la correction}}{8}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramme $\alpha \beta $ et Histogramme de la Luminance apr\IeC {\`e}s la correction}}{8}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces R\IeC {\'e}sultats de l'\IeC {\'e}galisation d'histogramme sur le canal $l$ des images de la \hyperref [figure3.1]{\textsc {Figure} 3.1}}}{10}{figure.3.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Fonction pente $s_\alpha $}}{10}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces R\IeC {\'e}sultats de l'ACE sur des images synth\IeC {\'e}tiques}}{12}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces R\IeC {\'e}sultats de l'ACE sur les images sous-marines}}{13}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\'e}sultats de l'ACE sur le canal $l$ des images de la \hyperref [figure3.1]{\textsc {Figure} 3.1}}}{14}{figure.4.4}

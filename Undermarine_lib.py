@@ -91,9 +91,9 @@ def gray_world_lab(imLab):
     # Apply gray-world correction to the chromatic channels a and b
     imLab[:, :, 1] -= np.mean(imLab[:, :, 1])  
     imLab[:, :, 2] -= np.mean(imLab[:, :, 2])  
-    L = (np.clip(np.exp(imLab[:, :, 0]), 0, 1) * 255).astype(np.uint8)
-    L = ace_enhance_image_poly_channel(L, 7, 11, "1/r").astype(np.float32) / 255.0 
-    imLab[:, :, 0] = np.log(L + 1e-06)
+    # L = (np.clip(np.exp(imLab[:, :, 0]), 0, 1) * 255).astype(np.uint8)
+    # L = ace_enhance_image_poly_channel(L, 7, 11, "1/r").astype(np.float32) / 255.0 
+    # imLab[:, :, 0] = np.log(L + 1e-06)
 
 
 def white_patches_lab(imLab, percent=2.0):
@@ -149,7 +149,7 @@ def process_underwater_image(imBGR, color_space="Lab", hyp="GW"):
         imLMS = xyz_to_lms(imXYZ)
         imLab = lms_to_lab(imLMS)  
 
-        # display_lab(imLab)
+        display_lab(imLab)
 
         if hyp == "GW":
             gray_world_lab(imLab) 
@@ -158,7 +158,7 @@ def process_underwater_image(imBGR, color_space="Lab", hyp="GW"):
         elif hyp == "SWP":
             spacial_white_patches_lab(imLab)
 
-        # display_lab(imLab)
+        display_lab(imLab)
 
         imLabInv = (np.clip(lab_to_rgb(imLab), 0, 1) * 255).astype(np.uint8)
 
@@ -483,20 +483,34 @@ def delete_images(directory):
 
 
 def display_lab(lab_image):
-    # Display the L, a, and b channels of a Lab image."""
+    # Display the L, a, and b channels of a Lab image, including the average point and (0, 0) on the αβ diagram.
     l = lab_image[:, :, 0].flatten()
-    alpha = lab_image[:, :, 1].flatten()  
+    alpha = lab_image[:, :, 1].flatten()
     beta = lab_image[:, :, 2].flatten()
+
+    mean_alpha = np.mean(alpha)
+    mean_beta = np.mean(beta)
+
+    zero_alpha, zero_beta = 0, 0
 
     fig, ax = plt.subplots(1, 2, figsize=(14, 6))
 
-    ax[0].scatter(alpha, beta, s=1, color='blue', alpha=0.5)  
+    ax[0].scatter(alpha, beta, s=1, color='blue', alpha=0.5, label="Pixels")  
+    ax[0].scatter(mean_alpha, mean_beta, s=100, color='red', label="Mean Point")  
+    ax[0].scatter(zero_alpha, zero_beta, s=100, color='green', label="(0, 0)") 
+
+    ax[0].axhline(y=mean_beta, color='red', linestyle='--', linewidth=1)  
+    ax[0].axvline(x=mean_alpha, color='red', linestyle='--', linewidth=1)
+    ax[0].axhline(y=zero_beta, color='green', linestyle='--', linewidth=1) 
+    ax[0].axvline(x=zero_alpha, color='green', linestyle='--', linewidth=1)
+
     ax[0].set_title('αβ Diagram')
     ax[0].set_xlabel('α (green-red component)')
     ax[0].set_ylabel('β (blue-yellow component)')
     ax[0].set_xlim(np.min(alpha), np.max(alpha))
     ax[0].set_ylim(np.min(beta), np.max(beta))
     ax[0].grid(True)
+    ax[0].legend()
 
     ax[1].hist(l, bins=50, color='gray', alpha=0.7)  
     ax[1].set_title('Luminance (L) Histogram')
