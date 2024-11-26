@@ -7,11 +7,11 @@
 \beamer@sectionintoc {2}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace RGB}{8}{0}{2}
 \beamer@subsectionintoc {2}{1}{Hypoth\IeC {\`e}se du Monde Gris}{9}{0}{2}
 \beamer@subsectionintoc {2}{2}{Hypoth\IeC {\`e}se des White Patches}{12}{0}{2}
-\beamer@sectionintoc {3}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace \( l\alpha \beta \)}{15}{0}{3}
-\beamer@subsectionintoc {3}{1}{Conversion dans l'Espace $l\alpha \beta $}{17}{0}{3}
-\beamer@subsectionintoc {3}{2}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{18}{0}{3}
-\beamer@sectionintoc {4}{M\IeC {\'e}thode ACE : \IeC {\'E}galisation Automatique des Couleurs}{26}{0}{4}
-\beamer@subsectionintoc {4}{1}{Mod\IeC {\`e}le et Formulation Math\IeC {\'e}matique}{28}{0}{4}
-\beamer@subsectionintoc {4}{2}{Fonction Pente Polynomiale}{30}{0}{4}
-\beamer@subsectionintoc {4}{3}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}{34}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{38}{0}{5}
+\beamer@sectionintoc {3}{Correction des Couleurs \IeC {\`a} l'Aide de l'Espace \( l\alpha \beta \)}{16}{0}{3}
+\beamer@subsectionintoc {3}{1}{Conversion dans l'Espace $l\alpha \beta $}{18}{0}{3}
+\beamer@subsectionintoc {3}{2}{Correction et Am\IeC {\'e}lioration dans l'Espace \( l\alpha \beta \)}{19}{0}{3}
+\beamer@sectionintoc {4}{M\IeC {\'e}thode ACE : \IeC {\'E}galisation Automatique des Couleurs}{29}{0}{4}
+\beamer@subsectionintoc {4}{1}{Mod\IeC {\`e}le et Formulation Math\IeC {\'e}matique}{31}{0}{4}
+\beamer@subsectionintoc {4}{2}{Fonction Pente Polynomiale}{33}{0}{4}
+\beamer@subsectionintoc {4}{3}{Impl\IeC {\'e}mentation pour la Correction des Images Sous-marines}{37}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{42}{0}{5}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2020.12.11)  25 NOV 2024 20:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2020.12.11)  26 NOV 2024 10:44
 entering extended mode
 **./Slides_CSC_4IM01_TP.tex
 (Slides_CSC_4IM01_TP.tex
@@ -1624,7 +1624,11 @@ ucture.sty")
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 48.
 
-(Slides_CSC_4IM01_TP.aux)
+(Slides_CSC_4IM01_TP.aux
+
+LaTeX Warning: Label `figure2.2' multiply defined.
+
+)
 \openout1 = `Slides_CSC_4IM01_TP.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -1975,7 +1979,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <7> not available
 ] [13
 
 ]
-<image005.png, id=516, 766.7847pt x 296.307pt>
+<image005.png, id=517, 766.7847pt x 296.307pt>
 File: image005.png Graphic file (type png)
 <use image005.png>
 Package pdftex.def Info: image005.png  used on input line 198. on input line 19
@@ -1990,180 +1994,245 @@ Overfull \hbox (5.69043pt too wide) in paragraph at lines 198--198
 [14
 
  <./image005.png>]
+<image013.png, id=545, 729.927pt x 285.4665pt>
+File: image013.png Graphic file (type png)
+<use image013.png>
+Package pdftex.def Info: image013.png  used on input line 208. on input line 20
+8.
+Package pdftex.def Info: Requested size: 312.9803pt x 122.40408pt on input line
+ 208.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 200.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 200.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 200.
-
-(Slides_CSC_4IM01_TP.toc) [15
-
-] [16
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 208.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 208.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 208.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 208.
-
-[17
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 232.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 232.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 232.
-
-[18
-
-] [19
-
-]
-<image006.png, id=695, 750.8853pt x 294.8616pt>
-File: image006.png Graphic file (type png)
-<use image006.png>
-Package pdftex.def Info: image006.png  used on input line 255. on input line 25
-5.
-Package pdftex.def Info: Requested size: 312.9803pt x 122.90068pt on input line
- 255.
-
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 255--255
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 208--208
  [] 
  []
 
-[20
+pdfTeX warning (ext4): destination with the same identifier (name{figure2.2}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.208 \end{frame}
+                  [15
 
- <./image006.png>]
-<image007.png, id=725, 990.099pt x 433.62pt>
-File: image007.png Graphic file (type png)
-<use image007.png>
-Package pdftex.def Info: image007.png  used on input line 265. on input line 26
-5.
-Package pdftex.def Info: Requested size: 312.9803pt x 137.06741pt on input line
- 265.
+ <./image013.png>]
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 265--265
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 210.
+
+(Slides_CSC_4IM01_TP.toc) [16
+
+] [17
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 218.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 218.
+
+[18
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 242.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 242.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 242.
+
+[19
+
+] [20
+
+]
+<image006.png, id=723, 750.8853pt x 294.8616pt>
+File: image006.png Graphic file (type png)
+<use image006.png>
+Package pdftex.def Info: image006.png  used on input line 267. on input line 26
+7.
+Package pdftex.def Info: Requested size: 312.9803pt x 122.90068pt on input line
+ 267.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 267--267
  [] 
  []
 
 [21
 
- <./image007.png>]
-<image008.png, id=754, 990.099pt x 433.62pt>
-File: image008.png Graphic file (type png)
-<use image008.png>
-Package pdftex.def Info: image008.png  used on input line 275. on input line 27
-5.
+ <./image006.png>]
+<image007.png, id=753, 990.099pt x 433.62pt>
+File: image007.png Graphic file (type png)
+<use image007.png>
+Package pdftex.def Info: image007.png  used on input line 278. on input line 27
+8.
 Package pdftex.def Info: Requested size: 312.9803pt x 137.06741pt on input line
- 275.
+ 278.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 275--275
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 278--278
  [] 
  []
 
 [22
 
- <./image008.png>] [23
+ <./image007.png>]
+<image008.png, id=782, 990.099pt x 433.62pt>
+File: image008.png Graphic file (type png)
+<use image008.png>
+Package pdftex.def Info: image008.png  used on input line 289. on input line 28
+9.
+Package pdftex.def Info: Requested size: 312.9803pt x 137.06741pt on input line
+ 289.
 
-] [24
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 289--289
+ [] 
+ []
+
+[23
+
+ <./image008.png>] [24
 
 ]
-<image009.png, id=834, 727.0362pt x 291.9708pt>
-File: image009.png Graphic file (type png)
-<use image009.png>
-Package pdftex.def Info: image009.png  used on input line 315. on input line 31
-5.
-Package pdftex.def Info: Requested size: 312.9803pt x 125.68755pt on input line
- 315.
+<image012.png, id=837, 731.3724pt x 288.3573pt>
+File: image012.png Graphic file (type png)
+<use image012.png>
+Package pdftex.def Info: image012.png  used on input line 311. on input line 31
+1.
+Package pdftex.def Info: Requested size: 312.9803pt x 123.40161pt on input line
+ 311.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 315--315
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 311--311
  [] 
  []
 
 [25
 
- <./image009.png>] (Slides_CSC_4IM01_TP.toc) [26
+ <./image012.png>]
+<image011.png, id=867, 689.4558pt x 275.3487pt>
+File: image011.png Graphic file (type png)
+<use image011.png>
+Package pdftex.def Info: image011.png  used on input line 323. on input line 32
+3.
+Package pdftex.def Info: Requested size: 312.9803pt x 124.99814pt on input line
+ 323.
 
-] [27
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 323--323
+ [] 
+ []
 
-] [28
+[26
 
-] [29
+ <./image011.png>] [27
+
+]
+<image009.png, id=921, 727.0362pt x 291.9708pt>
+File: image009.png Graphic file (type png)
+<use image009.png>
+Package pdftex.def Info: image009.png  used on input line 353. on input line 35
+3.
+Package pdftex.def Info: Requested size: 312.9803pt x 125.68755pt on input line
+ 353.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 353--353
+ [] 
+ []
+
+[28
+
+ <./image009.png>] (Slides_CSC_4IM01_TP.toc) [29
 
 ] [30
 
-]
-[31
+] [31
 
 ] [32
 
 ] [33
 
-] [34
+]
+[34
+
+] [35
+
+] [36
+
+] [37
 
 ]
-<image002.png, id=1115, 789.9111pt x 288.3573pt>
+<image001.png, id=1202, 938.7873pt x 473.3685pt>
+File: image001.png Graphic file (type png)
+<use image001.png>
+Package pdftex.def Info: image001.png  used on input line 492. on input line 49
+2.
+Package pdftex.def Info: Requested size: 312.9803pt x 157.8156pt on input line 
+492.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 492--492
+ [] 
+ []
+
+[38
+
+ <./image001.png>]
+<image002.png, id=1231, 789.9111pt x 288.3573pt>
 File: image002.png Graphic file (type png)
 <use image002.png>
-Package pdftex.def Info: image002.png  used on input line 456. on input line 45
-6.
+Package pdftex.def Info: image002.png  used on input line 504. on input line 50
+4.
 Package pdftex.def Info: Requested size: 312.9803pt x 114.24968pt on input line
- 456.
+ 504.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 456--456
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 504--504
  [] 
  []
 
-[35
+[39
 
- <./image002.png>] [36
+ <./image002.png>] [40
 
 ]
-<image003.png, id=1169, 788.4657pt x 296.307pt>
+<image003.png, id=1285, 788.4657pt x 296.307pt>
 File: image003.png Graphic file (type png)
 <use image003.png>
-Package pdftex.def Info: image003.png  used on input line 473. on input line 47
-3.
+Package pdftex.def Info: image003.png  used on input line 521. on input line 52
+1.
 Package pdftex.def Info: Requested size: 312.9803pt x 117.62096pt on input line
- 473.
+ 521.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 473--473
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 521--521
  [] 
  []
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 473.
+LaTeX Warning: Command \l invalid in math mode on input line 521.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 473.
+LaTeX Warning: Command \l invalid in math mode on input line 521.
 
-[37
+[41
 
- <./image003.png>] [38
+ <./image003.png>] [42
 
 ]
 \tf@nav=\write7
@@ -2177,19 +2246,23 @@ LaTeX Warning: Command \l invalid in math mode on input line 473.
 
  
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 480.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 480.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 528.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
 (Slides_CSC_4IM01_TP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 480.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 480.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
 Package rerunfilecheck Info: File `Slides_CSC_4IM01_TP.out' has not changed.
-(rerunfilecheck)             Checksum: 287C2F5F7B92277DF00EDE12F4ECB42A;1334.
+(rerunfilecheck)             Checksum: C31AAB452AC316041C3653B1F4AC6658;1334.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 35409 strings out of 493314
- 712018 string characters out of 3138866
- 864437 words of memory out of 3000000
- 38187 multiletter control sequences out of 15000+200000
+ 35451 strings out of 493314
+ 712546 string characters out of 3138866
+ 864589 words of memory out of 3000000
+ 38214 multiletter control sequences out of 15000+200000
  541787 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,16n,96p,10393b,826s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2211,9 +2284,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX
 blic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/symbols/msbm7.pfb>
-Output written on Slides_CSC_4IM01_TP.pdf (38 pages, 6116344 bytes).
+Output written on Slides_CSC_4IM01_TP.pdf (42 pages, 8584198 bytes).
 PDF statistics:
- 1308 PDF objects out of 1440 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1426 PDF objects out of 1440 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

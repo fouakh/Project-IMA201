@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2020.12.11)  25 NOV 2024 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2020.12.11)  26 NOV 2024 10:38
 entering extended mode
 **./Projet_CSC_4IM01_TP.tex
 (Projet_CSC_4IM01_TP.tex
@@ -1644,7 +1644,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 44.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count335
-<TP.png, id=110, 376.40625pt x 176.15813pt>
+<TP.png, id=114, 376.40625pt x 176.15813pt>
 File: TP.png Graphic file (type png)
 <use TP.png>
 Package pdftex.def Info: TP.png  used on input line 75. on input line 75.
@@ -1671,238 +1671,248 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Overfull \hbox (0.33653pt too wide) in paragraph at lines 114--118
+Overfull \hbox (0.33653pt too wide) in paragraph at lines 115--119
 \T1/qpl/m/n/10 les-quelles s'ap-puyer pour en-traî-ner l'al-go-rithme. La mé-th
 ode de trans-fert d'image à image non-supervisée
  []
 
 [3]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 149.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 150.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 149.
+(Font)              using `T1/cmtt/m/n' instead on input line 150.
 
 [4]
-<image004.png, id=170, 779.7933pt x 281.853pt>
+<image004.png, id=175, 779.7933pt x 281.853pt>
 File: image004.png Graphic file (type png)
 <use image004.png>
-Package pdftex.def Info: image004.png  used on input line 171. on input line 17
-1.
+Package pdftex.def Info: image004.png  used on input line 172. on input line 17
+2.
 Package pdftex.def Info: Requested size: 512.1496pt x 185.12039pt on input line
- 171.
+ 172.
 
-Overfull \hbox (22.76184pt too wide) in paragraph at lines 171--172
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 172--173
  [] 
  []
 
 [5 <./image004.png>]
-<image005.png, id=181, 766.7847pt x 296.307pt>
+<image005.png, id=187, 766.7847pt x 296.307pt>
 File: image005.png Graphic file (type png)
 <use image005.png>
-Package pdftex.def Info: image005.png  used on input line 210. on input line 21
-0.
+Package pdftex.def Info: image005.png  used on input line 211. on input line 21
+1.
 Package pdftex.def Info: Requested size: 512.1496pt x 197.91428pt on input line
- 210.
+ 211.
 
-Overfull \hbox (22.76184pt too wide) in paragraph at lines 210--211
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 211--212
  [] 
  []
 
+<image010.png, id=188, 729.927pt x 285.4665pt>
+File: image010.png Graphic file (type png)
+<use image010.png>
+Package pdftex.def Info: image010.png  used on input line 219. on input line 21
+9.
+Package pdftex.def Info: Requested size: 512.1496pt x 200.30867pt on input line
+ 219.
+
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 219--220
+ [] 
+ []
+
+[6 <./image005.png> <./image010.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 222.
+(hyperref)                removing `math shift' on input line 229.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 222.
+(hyperref)                removing `\alpha' on input line 229.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 222.
+(hyperref)                removing `\beta' on input line 229.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 222.
+(hyperref)                removing `math shift' on input line 229.
 
 
-Overfull \hbox (14.40105pt too wide) in paragraph at lines 224--227
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 233.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 233.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 233.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 233.
+
+
+Overfull \hbox (14.40105pt too wide) in paragraph at lines 235--238
 []\T1/qpl/m/n/10 Les étapes de conver-sion dé-crites ci-dessous ont été im-plé-
 men-tées dans la fonc-tion [][][][][][]
  []
 
-[6 <./image005.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 271.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 271.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 271.
-
-<image006.png, id=195, 750.8853pt x 294.8616pt>
-File: image006.png Graphic file (type png)
-<use image006.png>
-Package pdftex.def Info: image006.png  used on input line 284. on input line 28
-4.
-Package pdftex.def Info: Requested size: 512.1496pt x 201.11511pt on input line
- 284.
-
-Overfull \hbox (22.76184pt too wide) in paragraph at lines 284--285
- [] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image007.png, id=196, 990.099pt x 433.62pt>
-File: image007.png Graphic file (type png)
-<use image007.png>
-Package pdftex.def Info: image007.png  used on input line 292. on input line 29
-2.
-Package pdftex.def Info: Requested size: 426.79134pt x 186.91612pt on input lin
-e 292.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image008.png, id=197, 990.099pt x 433.62pt>
-File: image008.png Graphic file (type png)
-<use image008.png>
-Package pdftex.def Info: image008.png  used on input line 300. on input line 30
-0.
-Package pdftex.def Info: Requested size: 426.79134pt x 186.91612pt on input lin
-e 300.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [7]
 
-LaTeX Warning: Text page 8 contains only floats.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 282.
 
-[8 <./image006.png> <./image007.png> <./image008.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 317.
+(hyperref)                removing `\alpha' on input line 282.
 
-<image009.png, id=222, 727.0362pt x 291.9708pt>
-File: image009.png Graphic file (type png)
-<use image009.png>
-Package pdftex.def Info: image009.png  used on input line 338. on input line 33
-8.
-Package pdftex.def Info: Requested size: 512.1496pt x 205.6835pt on input line 
-338.
 
-Overfull \hbox (22.76184pt too wide) in paragraph at lines 338--339
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 282.
+
+<image006.png, id=216, 750.8853pt x 294.8616pt>
+File: image006.png Graphic file (type png)
+<use image006.png>
+Package pdftex.def Info: image006.png  used on input line 295. on input line 29
+5.
+Package pdftex.def Info: Requested size: 512.1496pt x 201.11511pt on input line
+ 295.
+
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 295--296
  [] 
  []
 
+<image007.png, id=217, 990.099pt x 433.62pt>
+File: image007.png Graphic file (type png)
+<use image007.png>
+Package pdftex.def Info: image007.png  used on input line 303. on input line 30
+3.
+Package pdftex.def Info: Requested size: 426.79134pt x 186.91612pt on input lin
+e 303.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9]
+<image008.png, id=218, 990.099pt x 433.62pt>
+File: image008.png Graphic file (type png)
+<use image008.png>
+Package pdftex.def Info: image008.png  used on input line 311. on input line 31
+1.
+Package pdftex.def Info: Requested size: 426.79134pt x 186.91612pt on input lin
+e 311.
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 354.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <./image006.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 328.
+
+[9 <./image007.png> <./image008.png>]
+<image009.png, id=236, 727.0362pt x 291.9708pt>
+File: image009.png Graphic file (type png)
+<use image009.png>
+Package pdftex.def Info: image009.png  used on input line 349. on input line 34
+9.
+Package pdftex.def Info: Requested size: 512.1496pt x 205.6835pt on input line 
+349.
+
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 349--350
+ [] 
+ []
 
 [10 <./image009.png>]
-Overfull \hbox (7.47754pt too wide) in paragraph at lines 411--412
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 365.
+
+
+Overfull \hbox (7.47754pt too wide) in paragraph at lines 422--423
 []\T1/qpl/m/n/10 Lors des convo-lu-tions sur une image, la ges-tion des bords e
 st un défi. L'ex-ten-sion sy-mé-trique à demi-échantillon
  []
 
 [11]
-<image001.png, id=246, 938.7873pt x 473.3685pt>
+<image001.png, id=253, 938.7873pt x 473.3685pt>
 File: image001.png Graphic file (type png)
 <use image001.png>
-Package pdftex.def Info: image001.png  used on input line 463. on input line 46
-3.
+Package pdftex.def Info: image001.png  used on input line 474. on input line 47
+4.
 Package pdftex.def Info: Requested size: 512.1496pt x 258.25157pt on input line
- 463.
+ 474.
 
-Overfull \hbox (22.76184pt too wide) in paragraph at lines 463--464
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 474--475
  [] 
  []
 
-[12 <./image001.png>]
-<image002.png, id=254, 789.9111pt x 288.3573pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12]
+<image002.png, id=262, 789.9111pt x 288.3573pt>
 File: image002.png Graphic file (type png)
 <use image002.png>
-Package pdftex.def Info: image002.png  used on input line 483. on input line 48
-3.
+Package pdftex.def Info: image002.png  used on input line 494. on input line 49
+4.
 Package pdftex.def Info: Requested size: 512.1496pt x 186.96802pt on input line
- 483.
+ 494.
 
-Overfull \hbox (22.76184pt too wide) in paragraph at lines 483--484
- [] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 489.
-
-<image003.png, id=256, 788.4657pt x 296.307pt>
-File: image003.png Graphic file (type png)
-<use image003.png>
-Package pdftex.def Info: image003.png  used on input line 495. on input line 49
-5.
-Package pdftex.def Info: Requested size: 512.1496pt x 192.47067pt on input line
- 495.
-
-Overfull \hbox (22.76184pt too wide) in paragraph at lines 495--496
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 494--495
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <./image002.png>] (Projet_CSC_4IM01_TP.lof)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 500.
+
+<image003.png, id=264, 788.4657pt x 296.307pt>
+File: image003.png Graphic file (type png)
+<use image003.png>
+Package pdftex.def Info: image003.png  used on input line 506. on input line 50
+6.
+Package pdftex.def Info: Requested size: 512.1496pt x 192.47067pt on input line
+ 506.
+
+Overfull \hbox (22.76184pt too wide) in paragraph at lines 506--507
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./image001.png>] [14 <./image002.png> <./image003.png>]
+(Projet_CSC_4IM01_TP.lof)
 \tf@lof=\write7
 \openout7 = `Projet_CSC_4IM01_TP.lof'.
 
- [14 <./image003.png>]
-
+ [15] 
 AED: lastpage setting LastPage
-[15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 517.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 517.
+[16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 538.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 538.
  (Projet_CSC_4IM01_TP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 517.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 517.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 538.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 538.
 Package rerunfilecheck Info: File `Projet_CSC_4IM01_TP.out' has not changed.
-(rerunfilecheck)             Checksum: 63D238431B25D34072BFF6A969737FC0;2252.
+(rerunfilecheck)             Checksum: BCF228EA6745A372ECAEE3F9FEEBC0C9;2299.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 517.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 538.
  ) 
 Here is how much of TeX's memory you used:
- 30968 strings out of 493314
- 605377 string characters out of 3138866
- 744810 words of memory out of 3000000
- 33920 multiletter control sequences out of 15000+200000
+ 30980 strings out of 493314
+ 605513 string characters out of 3138866
+ 744888 words of memory out of 3000000
+ 33927 multiletter control sequences out of 15000+200000
  582609 words of font info for 91 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,58p,10393b,875s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1924,9 +1934,9 @@ symbols/msbm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qplb
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qplr.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qplri.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Projet_CSC_4IM01_TP.pdf (15 pages, 5288145 bytes).
+Output written on Projet_CSC_4IM01_TP.pdf (16 pages, 5953833 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

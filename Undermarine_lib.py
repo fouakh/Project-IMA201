@@ -25,7 +25,7 @@ def gray_world_BGR(image):
 def white_patches_BGR(image):
     # Apply white patches correction to an image in BGR format.
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
-    num_patch_pixels = int(0.02 * gray_image.size) 
+    num_patch_pixels = int(0.20 * gray_image.size) 
     indices = np.unravel_index(np.argsort(gray_image, axis=None)[-num_patch_pixels:], gray_image.shape)
     bright_patches = image[indices] 
     mean_patch = np.mean(bright_patches, axis=0) 
@@ -96,7 +96,7 @@ def gray_world_lab(imLab):
     # imLab[:, :, 0] = np.log(L + 1e-06)
 
 
-def white_patches_lab(imLab, percent=2.0):
+def white_patches_lab(imLab, percent=20.0):
     # Apply white-patches correction to the a and b channels based on the brightest specified percentage of pixels.
     num_pixels = imLab[:, :, 0].size  
     num_brightest_pixels = int(num_pixels * percent / 100)  
@@ -149,7 +149,7 @@ def process_underwater_image(imBGR, color_space="Lab", hyp="GW"):
         imLMS = xyz_to_lms(imXYZ)
         imLab = lms_to_lab(imLMS)  
 
-        display_lab(imLab)
+        # display_lab(imLab)
 
         if hyp == "GW":
             gray_world_lab(imLab) 
@@ -158,7 +158,7 @@ def process_underwater_image(imBGR, color_space="Lab", hyp="GW"):
         elif hyp == "SWP":
             spacial_white_patches_lab(imLab)
 
-        display_lab(imLab)
+        # display_lab(imLab)
 
         imLabInv = (np.clip(lab_to_rgb(imLab), 0, 1) * 255).astype(np.uint8)
 

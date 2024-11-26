@@ -22,7 +22,7 @@ def main(saving, directory):
                 im = cv2.imread(file_path)
 
                 if im is not None:
-                    imc = process_underwater_image(im, "Lab", "GW")
+                    imc = process_underwater_image(im, "BGR", "WP")
                     # imc = ace_enhance_image_poly(im, 7, 11, '1/r')
                     save_image(imc, filename, directory)
                 else:

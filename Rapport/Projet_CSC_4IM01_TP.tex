@@ -70,7 +70,7 @@ Ann\'ee universitaire : 2024/2025\\ }
 \textbf{\Large Fouad KHELIFI}\vspace{2mm}\\ 
 \textbf{\Large Hortense BONNEAU} 
 \end{center}
-\vspace*{20mm}
+\vspace*{25mm}
 \textbf{Encadrant : Yann GOUSSEAU} 
 \newpage
 \fancyhf{}
@@ -105,7 +105,8 @@ Ces méthodes, bien que précises, dépendent fortement des caractéristiques de
 \item[$\bullet$] \textbf{Espace $l\alpha\beta$ :} En convertissant les images dans un espace de couleur perceptuel, cette approche ajuste indépendamment la luminosité, la teinte et la saturation pour atténuer la dominante bleue et rehausser les détails visuels.
 \item[$\bullet$] \textbf{Automatic Color Equalization (ACE) :} Inspirée de la perception humaine, cette méthode ajuste automatiquement les couleurs et le contraste pour compenser les dominantes dues à l’absorption sous-marine, offrant des images plus équilibrées et naturelles.
 \end{itemize}
-Le document met en avant et implémente spécifiquement ces deux méthodes, en raison de leur efficacité et de leur capacité à traiter rapidement des images sous-marines tout en améliorant leur rendu visuel.
+Le document met en avant et implémente spécifiquement ces deux méthodes, en raison de leur efficacité et de leur capacité à traiter rapidement des images sous-marines tout en améliorant leur rendu visuel. L'intégralité du code source ainsi que les images utilisées dans ce projet sont disponibles sur le dépôt GitHub accessible via \href{https://github.com/fouakh/Project-IMA201}{\colorbox{black}{\textcolor{white}{\textbf{ce lien.}}}}
+
 
 \subsection{Méthodes par Apprentissage}
 \par Il existe plusieurs méthodes par apprentissage qui se proposent de restaurer des images sous-marines, on peut citer par exemple :
@@ -210,10 +211,20 @@ Où :
 \includegraphics[width=18cm]{image005.png}
 \end{center}
 \label{figure2.2}
-\caption{Résultats de la correction RGB (avec l'hypothèse des white patches) sur des images sous-marines}
+\caption{Résultats de la correction RGB (avec l'hypothèse des white patches avec $p=2\%$) }
 \end{figure} 
 
-\par Dans la \hyperref[figure2.2]{\textsc{Figure} 2.2} ( le reste des images traitées sont dans le fichier \colorbox{gray!15}{\texttt{\textbf{Images\_RGB\_WP}}}), les deux premières images n'ont pas été corrigées, car l'hypothèse des patchs blancs n'est pas pertinente ici : bien qu'il y ait un \textit{voile} bleu, plusieurs zones blanches sont présentes, ce qui fausse l'application de cette méthode. En revanche, pour les images où cette hypothèse est valide, les résultats sont similaires à ceux de l'hypothèse du monde gris, car les deux méthodes corrigent les dominantes colorées de manière comparable.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=18cm]{image010.png}
+\end{center}
+\label{figure2.3}
+\caption{Résultats de la correction RGB (avec l'hypothèse des white patches avec $p=20\%$) }
+\end{figure}
+
+ \par Dans la \hyperref[figure2.2]{\textsc{Figure} 2.2} (le reste des images traitées sont dans le fichier \colorbox{gray!15}{\texttt{\textbf{Images\_RGB\_WP\_2p}}}), les deux premières images n'ont pas été corrigées, car l'hypothèse des patchs blancs n'est pas pertinente ici : bien qu'il y ait un \textit{voile} bleu, plusieurs zones blanches sont présentes, ce qui fausse l'application de cette méthode. Cependant, comme illustré dans la \hyperref[figure2.2]{\textsc{Figure} 2.3} (le reste des images traitées sont dans le fichier \colorbox{gray!15}{\texttt{\textbf{Images\_RGB\_WP\_20p}}}), en augmentant la valeur de \( p \), l'hypothèse des white patches devient progressivement valide même pour ces deux premières images, car un plus grand nombre de pixels lumineux est pris en compte, ce qui permet de capturer davantage de zones lumineuses pertinentes. Cette augmentation améliore la correction des dominantes colorées et permet d'obtenir des résultats proches de ceux de l'hypothèse du monde gris.
+\vspace{3mm}
+\par Cependant, augmenter excessivement la valeur de \( p \) peut engendrer des effets indésirables. En incluant trop de pixels dans la sélection des zones lumineuses, le facteur de correction devient biaisé par des zones qui ne devraient pas contribuer au calcul du point blanc. Cela peut entraîner une trop grande augmentation de la luminosité globale de l'image, rendant certaines zones surexposées et moins naturelles. Il est donc essentiel de choisir une valeur optimale de \( p \) qui équilibre la correction des couleurs et la préservation de la dynamique lumineuse de l'image.
 
 \section{Correction des Couleurs à l'Aide de l'Espace $l\alpha\beta$}
 
@@ -303,7 +314,7 @@ Dans l'espace \( l\alpha\beta \), la correction des couleurs se fait en ajustant
 \caption{Diagramme $\alpha\beta$ et Histogramme de la Luminance après la correction}
 \end{figure} 
 
-\par Comme on peut l'observer sur la \hyperref[figure3.1]{\textsc{Figure} 3.1} ( le reste des images traitées sont dans le fichier \colorbox{gray!15}{\texttt{\textbf{Images\_Lab\_WP}}}), la correction des couleurs dans l'espace \( l\alpha\beta \) est nettement meilleure que dans l'espace RGB. Cela s'explique par le fait que dans \( l\alpha\beta \), la luminance (\( l \)) est séparée des composantes chromatiques (\( \alpha \) et \( \beta \)). Cette séparation permet d'effectuer des ajustements spécifiques sur les canaux sans altérer la luminosité globale de l'image.
+\par Comme on peut l'observer sur la \hyperref[figure3.1]{\textsc{Figure} 3.1} ( le reste des images traitées sont dans le fichier \colorbox{gray!15}{\texttt{\textbf{Images\_Lab\_GW}}}), la correction des couleurs dans l'espace \( l\alpha\beta \) est nettement meilleure que dans l'espace RGB. Cela s'explique par le fait que dans \( l\alpha\beta \), la luminance (\( l \)) est séparée des composantes chromatiques (\( \alpha \) et \( \beta \)). Cette séparation permet d'effectuer des ajustements spécifiques sur les canaux sans altérer la luminosité globale de l'image.
 
 \subsubsection{Hypothèse des White Patches}  
 \par Cette méthode ajuste les canaux \( \alpha \) et \( \beta \) en fonction des pixels les plus lumineux (les "patchs blancs"). On identifie les \( p\% \) des pixels les plus lumineux, puis on calcule la moyenne des canaux \( \alpha \) et \( \beta \) pour ces pixels lumineux :
@@ -312,7 +323,7 @@ Dans l'espace \( l\alpha\beta \), la correction des couleurs se fait en ajustant
    \]
    où \( \bar{\alpha}_{\text{bright}} \) et \( \bar{\beta}_{\text{bright}} \) sont les moyennes des canaux \( \alpha \) et \( \beta \) pour les pixels lumineux, identifiés en fonction de leur luminance.
 \vspace{2mm}   
-\par La même observation s'applique qu'à la section \ref{WP} : si l'image d'origine contient des pixels naturellement blancs, elle ne satisfait pas l'hypothèse des patchs blancs, rendant la correction inefficace. En revanche, lorsque l'hypothèse est vérifiée, les résultats obtenus sont comparables à ceux de l'hypothèse du monde gris ( le images traitées sont dans le fichier \colorbox{gray!15}{\texttt{\textbf{Images\_Lab\_WP}}}).
+\par La même observation s'applique qu'à la section \ref{WP} : si l'image d'origine contient des pixels naturellement blancs, elle ne satisfait pas l'hypothèse des patchs blancs, rendant la correction inefficace. En revanche, lorsque l'hypothèse est vérifiée, les résultats obtenus sont comparables à ceux de l'hypothèse du monde gris ( le images traitées sont dans les fichiers \colorbox{gray!15}{\texttt{\textbf{Images\_Lab\_WP\_2p}}} et \colorbox{gray!15}{\texttt{\textbf{Images\_Lab\_WP\_20p}}}).
 
 \subsubsection{Égalisation d'Histogramme sur le Canal \( l \)}
 
@@ -498,6 +509,14 @@ $$
 \caption{Résultats de l'ACE sur le canal $l$ des images de la \hyperref[figure3.1]{\textsc{Figure} 3.1}}
 \end{figure} 
 
+\section{Conclusion}
+\par Comme nous avons pu le constater, la diversité des méthodes étudiées et expérimentées offre un large éventail de possibilités pour l'amélioration des images sous-marines. Chaque méthode possède des avantages. Toutefois, ces techniques présentent également des limites, notamment en termes de complexité computationnelle et d'adaptabilité à des conditions variées.
+
+\vspace{3mm}
+
+\par Lorsque l’on s’oriente vers des applications en temps réel, comme l’analyse de vidéos pour des robots sous-marins ou des systèmes de surveillance, la rapidité des algorithmes devient un critère essentiel. Les méthodes classiques, bien qu'efficaces dans des contextes spécifiques, peinent à répondre à cette exigence en raison du temps de traitement nécessaire. De ce fait, une approche moderne, basée sur l’exploitation de modèles d’apprentissage profond préalablement entraînés, s’impose comme une solution prometteuse. Ces modèles permettent de combiner \textbf{efficacité}, \textbf{rapidité} et \textbf{qualité}.
+
+
 \newpage
 \listoffigures
 \addcontentsline{toc}{section}{Table des figures}
@@ -510,6 +529,8 @@ $$
 \bibitem{3} E. Reinhard, M. Ashikhmin, B. Gooch, and P. Shirley, "Color Transfer between Images," \textit{Applied Perception}, vol. 34, September/October 2001.
 \bibitem{4} A. Rizzi, C. Gatta, and D. Marini, "A New Algorithm for Unsupervised Global and Local Color Correction," \textit{Department of Information Technology, University of Milano}, 2001.
 \bibitem{5} P. Getreuer, "Automatic Color Enhancement (ACE) and its Fast Implementation," \textit{Image Processing On Line}, 2012, doi: 10.5201/ipol.2012.g-ace.
+\bibitem{6} J. Han, M. Shoeiby, T. Malthus, E. Botha, J. Anstee, S. Anwar, R. Wei, M. A. Armin, H. Li, and L. Petersson, ``Underwater Image Restoration via Contrastive Learning and a Real-World Dataset,'' \textit{Remote Sensing}, vol. 14, no. 17, p. 4297, 2022. \url{https://doi.org/10.3390/rs14174297}.
+
   
 \end{doublespace}   
 \end{thebibliography}

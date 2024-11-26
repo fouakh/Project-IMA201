@@ -193,7 +193,17 @@ P_{\text{bright}} = \left\{ x \in \{1, \dots, N\} \mid \text{Gray}(x) \geq \thet
 \includegraphics[width=11cm]{image005.png}
 \end{center}
 \label{figure2.2}
-\caption{Résultats de la correction RGB (avec l'hypothèse des white patches) sur des images sous-marines}
+\caption{Résultats de la correction RGB (avec l'hypothèse des white patches $p=2\%$)}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Hypothèse des White Patches}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=11cm]{image013.png}
+\end{center}
+\label{figure2.2}
+\caption{Résultats de la correction RGB (avec l'hypothèse des white patches $p=20\%$)}
 \end{figure}
 \end{frame}
 
@@ -245,6 +255,8 @@ Dans l'espace \( l\alpha\beta \), la correction des couleurs se fait en ajustant
 \end{frame}
 
 \begin{frame}{Correction et Amélioration dans l'Espace \( l\alpha\beta \)}
+\textbf{Hypothèse du Monde Gris}
+\vspace{3mm}
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=11cm]{image006.png}
@@ -255,6 +267,7 @@ Dans l'espace \( l\alpha\beta \), la correction des couleurs se fait en ajustant
 \end{frame}
 
 \begin{frame}{Correction et Amélioration dans l'Espace \( l\alpha\beta \)}
+\textbf{Hypothèse du Monde Gris}
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=11cm]{image007.png}
@@ -265,6 +278,7 @@ Dans l'espace \( l\alpha\beta \), la correction des couleurs se fait en ajustant
 \end{frame}
 
 \begin{frame}{Correction et Amélioration dans l'Espace \( l\alpha\beta \)}
+\textbf{Hypothèse du Monde Gris}
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=11cm]{image008.png}
@@ -276,12 +290,36 @@ Dans l'espace \( l\alpha\beta \), la correction des couleurs se fait en ajustant
 
 \begin{frame}{Correction et Amélioration dans l'Espace \( l\alpha\beta \)}
 \textbf{Hypothèse des White Patches}
-\vspace{3mm}  
+\vspace{3mm}
 \par Cette méthode ajuste les canaux \( \alpha \) et \( \beta \) en fonction des pixels les plus lumineux (les "patchs blancs"). On identifie les \( p\% \) des pixels les plus lumineux, puis on calcule la moyenne des canaux \( \alpha \) et \( \beta \) pour ces pixels lumineux :
    \[
    \alpha^*(x) = \alpha(x) - \bar{\alpha}_{\text{bright}} \quad\quad\quad \beta^*(x) = \beta(x) - \bar{\beta}_{\text{bright}}
    \]
    où \( \bar{\alpha}_{\text{bright}} \) et \( \bar{\beta}_{\text{bright}} \) sont les moyennes des canaux \( \alpha \) et \( \beta \) pour les pixels lumineux, identifiés en fonction de leur luminance.
+\end{frame}
+
+\begin{frame}{Correction et Amélioration dans l'Espace \( l\alpha\beta \)}
+\textbf{Hypothèse des White Patches}
+\vspace{3mm}  
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=11cm]{image012.png}
+\end{center}
+\label{figure2.d3}
+\caption{Résultats de la correction $l\alpha\beta$ (avec l'hypothèse des white patches avec $p=2\%$) }
+\end{figure}
+\end{frame}
+
+\begin{frame}{Correction et Amélioration dans l'Espace \( l\alpha\beta \)}
+\textbf{Hypothèse des White Patches}
+\vspace{3mm}  
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=11cm]{image011.png}
+\end{center}
+\label{figure2.s3}
+\caption{Résultats de la correction $l\alpha\beta$ (avec l'hypothèse des white patches avec $p=20\%$) }
+\end{figure}
 \end{frame}
 
 \begin{frame}{Correction et Amélioration dans l'Espace \( l\alpha\beta \)}
@@ -444,6 +482,16 @@ $$
 \end{frame}
 
 \begin{frame}{Implémentation pour la Correction des Images Sous-marines}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=11cm]{image001.png}
+\end{center}
+\label{figure4.2}
+\caption{Résultats de l'ACE sur des images synthétiques}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Implémentation pour la Correction des Images Sous-marines}
 \textbf{Correction des Images Sous-marines avec l'ACE}
 \vspace{3mm}
 \begin{figure}[h!]
@@ -474,7 +522,7 @@ $$
 
 \section{Conclusion}
 \begin{frame}{Conclusion}
-
+\par Lorsque l’on s’oriente vers des applications en temps réel, comme l’analyse de vidéos pour des robots sous-marins ou des systèmes de surveillance, la rapidité des algorithmes devient un critère essentiel. Les méthodes classiques, bien qu'efficaces dans des contextes spécifiques, peinent à répondre à cette exigence en raison du temps de traitement nécessaire. De ce fait, une approche moderne, basée sur l’exploitation de modèles d’apprentissage profond préalablement entraînés, s’impose comme une solution prometteuse. Ces modèles permettent de combiner \textbf{efficacité}, \textbf{rapidité} et \textbf{qualité}.
 \end{frame}
 
 \end{document}
