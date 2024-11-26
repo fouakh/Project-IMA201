@@ -108,9 +108,50 @@ Ces méthodes, bien que précises, dépendent fortement des caractéristiques de
 On met en avant et implémente spécifiquement ces deux méthodes, en raison de leur efficacité et de leur capacité à traiter rapidement des images sous-marines tout en améliorant leur rendu visuel.
 \end{frame}
 
-\subsection{Méthodes Supervisées}
-\begin{frame}{Méthodes Supervisées}
+\subsection{Méthodes par Apprentissage}
+\begin{frame}{Méthodes par Apprentissage}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=10cm]{image014.png}
+\label{fig1}
+\caption{Workflow général du processus : construction de données, entraînement et test des modèles}
+\end{figure} 
+\end{center}
+\end{frame}
 
+\begin{frame}{Méthodes par Apprentissage}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=10cm]{image015.png}
+\label{fig2}
+\caption{Architecture globale et fonctions de perte du modèle CWR}
+\end{figure} 
+\end{center}
+\end{frame}
+
+\begin{frame}{Méthodes par Apprentissage}
+\textbf{Fonctions de perte à minimiser}
+\vspace{2mm}
+\begin{itemize}
+    \item \textbf{Adversarial Loss/Fonction de perte antagoniste :} Encourage la production d’images réalistes.
+    \item \textbf{PatchNCELoss :} Maximise l’information mutuelle entre patchs correspondants de l’image d’entrée et de sortie.
+    \item \textbf{Identity Loss :} Empêche le générateur d’opérer des changements de structures ou de couleurs non nécessaires.
+\end{itemize}
+
+La fonction de perte globale est définie comme suit :
+\[
+\mathcal{L}(G, D, H) = \lambda_{\text{GAN}} \mathcal{L}_{\text{GAN}}(G, D, X) 
++ \lambda_{\text{NCE}} \mathcal{L}_{\text{PatchNCE}}(G, H, X) 
++ \lambda_{\text{idt}} \mathcal{L}_{\text{Identity}}(G)
+\]
+où :
+\begin{itemize}
+    \item \( G \) : générateur,
+    \item \( D \) : discriminateur,
+    \item \( H \) : fonctions associées à PatchNCE,
+    \item \( X \) : données d'entrée,
+    \item \( \lambda_{\text{GAN}}, \lambda_{\text{NCE}}, \lambda_{\text{idt}} \) : pondérations des différentes fonctions de perte.
+\end{itemize}
 \end{frame}
 
 \section{Correction des Couleurs à l'Aide de l'Espace RGB}

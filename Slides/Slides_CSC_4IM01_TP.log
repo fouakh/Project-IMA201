@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2020.12.11)  26 NOV 2024 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2020.12.11)  26 NOV 2024 13:40
 entering extended mode
 **./Slides_CSC_4IM01_TP.tex
 (Slides_CSC_4IM01_TP.tex
@@ -1930,7 +1930,7 @@ Package pdftex.def Info: Requested size: 85.35826pt x 39.94835pt on input line
 ] (Slides_CSC_4IM01_TP.toc) [3
 
 ]
-<image010.png, id=231, 770.88pt x 513.41812pt>
+<image010.png, id=232, 770.88pt x 513.41812pt>
 File: image010.png Graphic file (type png)
 <use image010.png>
 Package pdftex.def Info: image010.png  used on input line 84. on input line 84.
@@ -1943,66 +1943,88 @@ Package pdftex.def Info: Requested size: 85.35826pt x 56.84436pt on input line
 
 ] [6
 
-] [7
-
-] (Slides_CSC_4IM01_TP.toc) [8
-
-] [9
-
-] [10
-
 ]
-<image004.png, id=432, 779.7933pt x 281.853pt>
-File: image004.png Graphic file (type png)
-<use image004.png>
-Package pdftex.def Info: image004.png  used on input line 152. on input line 15
-2.
-Package pdftex.def Info: Requested size: 312.9803pt x 113.12627pt on input line
- 152.
-
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 152--152
- [] 
- []
+<image014.png, id=312, 4077.2325pt x 2479.2625pt>
+File: image014.png Graphic file (type png)
+<use image014.png>
+Package pdftex.def Info: image014.png  used on input line 120. on input line 12
+0.
+Package pdftex.def Info: Requested size: 284.52756pt x 172.99864pt on input lin
+e 120.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <8> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 152.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 120.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <7> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 152.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 120.
 
-[11
+[7
 
- <./image004.png>] [12
+ <./image014.png>]
+<image015.png, id=342, 4209.7275pt x 2698.08pt>
+File: image015.png Graphic file (type png)
+<use image015.png>
+Package pdftex.def Info: image015.png  used on input line 130. on input line 13
+0.
+Package pdftex.def Info: Requested size: 284.52756pt x 182.33897pt on input lin
+e 130.
+ [8
 
-] [13
+ <./image015.png>] [9
+
+] (Slides_CSC_4IM01_TP.toc)
+[10
+
+] [11
+
+] [12
 
 ]
-<image005.png, id=517, 766.7847pt x 296.307pt>
-File: image005.png Graphic file (type png)
-<use image005.png>
-Package pdftex.def Info: image005.png  used on input line 198. on input line 19
-8.
-Package pdftex.def Info: Requested size: 312.9803pt x 120.94409pt on input line
- 198.
+<image004.png, id=489, 779.7933pt x 281.853pt>
+File: image004.png Graphic file (type png)
+<use image004.png>
+Package pdftex.def Info: image004.png  used on input line 193. on input line 19
+3.
+Package pdftex.def Info: Requested size: 312.9803pt x 113.12627pt on input line
+ 193.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 198--198
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 193--193
  [] 
  []
 
-[14
+[13
+
+ <./image004.png>] [14
+
+] [15
+
+]
+<image005.png, id=573, 766.7847pt x 296.307pt>
+File: image005.png Graphic file (type png)
+<use image005.png>
+Package pdftex.def Info: image005.png  used on input line 239. on input line 23
+9.
+Package pdftex.def Info: Requested size: 312.9803pt x 120.94409pt on input line
+ 239.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 239--239
+ [] 
+ []
+
+[16
 
  <./image005.png>]
-<image013.png, id=545, 729.927pt x 285.4665pt>
+<image013.png, id=601, 729.927pt x 285.4665pt>
 File: image013.png Graphic file (type png)
 <use image013.png>
-Package pdftex.def Info: image013.png  used on input line 208. on input line 20
-8.
+Package pdftex.def Info: image013.png  used on input line 249. on input line 24
+9.
 Package pdftex.def Info: Requested size: 312.9803pt x 122.40408pt on input line
- 208.
+ 249.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 208--208
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 249--249
  [] 
  []
 
@@ -2010,229 +2032,229 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure2.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.208 \end{frame}
-                  [15
+l.249 \end{frame}
+                  [17
 
  <./image013.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 210.
+(hyperref)                removing `math shift' on input line 251.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 210.
+(hyperref)                removing `\alpha' on input line 251.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 210.
+(hyperref)                removing `\beta' on input line 251.
 
-(Slides_CSC_4IM01_TP.toc) [16
+(Slides_CSC_4IM01_TP.toc) [18
 
-] [17
+] [19
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 218.
+(hyperref)                removing `math shift' on input line 259.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 218.
+(hyperref)                removing `\alpha' on input line 259.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 218.
+(hyperref)                removing `\beta' on input line 259.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 218.
+(hyperref)                removing `math shift' on input line 259.
 
-[18
+[20
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 242.
+(hyperref)                removing `math shift' on input line 283.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 242.
+(hyperref)                removing `\alpha' on input line 283.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 242.
-
-[19
-
-] [20
-
-]
-<image006.png, id=723, 750.8853pt x 294.8616pt>
-File: image006.png Graphic file (type png)
-<use image006.png>
-Package pdftex.def Info: image006.png  used on input line 267. on input line 26
-7.
-Package pdftex.def Info: Requested size: 312.9803pt x 122.90068pt on input line
- 267.
-
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 267--267
- [] 
- []
+(hyperref)                removing `\beta' on input line 283.
 
 [21
 
- <./image006.png>]
-<image007.png, id=753, 990.099pt x 433.62pt>
-File: image007.png Graphic file (type png)
-<use image007.png>
-Package pdftex.def Info: image007.png  used on input line 278. on input line 27
+] [22
+
+]
+<image006.png, id=779, 750.8853pt x 294.8616pt>
+File: image006.png Graphic file (type png)
+<use image006.png>
+Package pdftex.def Info: image006.png  used on input line 308. on input line 30
 8.
-Package pdftex.def Info: Requested size: 312.9803pt x 137.06741pt on input line
- 278.
+Package pdftex.def Info: Requested size: 312.9803pt x 122.90068pt on input line
+ 308.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 278--278
- [] 
- []
-
-[22
-
- <./image007.png>]
-<image008.png, id=782, 990.099pt x 433.62pt>
-File: image008.png Graphic file (type png)
-<use image008.png>
-Package pdftex.def Info: image008.png  used on input line 289. on input line 28
-9.
-Package pdftex.def Info: Requested size: 312.9803pt x 137.06741pt on input line
- 289.
-
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 289--289
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 308--308
  [] 
  []
 
 [23
 
- <./image008.png>] [24
+ <./image006.png>]
+<image007.png, id=809, 990.099pt x 433.62pt>
+File: image007.png Graphic file (type png)
+<use image007.png>
+Package pdftex.def Info: image007.png  used on input line 319. on input line 31
+9.
+Package pdftex.def Info: Requested size: 312.9803pt x 137.06741pt on input line
+ 319.
 
-]
-<image012.png, id=837, 731.3724pt x 288.3573pt>
-File: image012.png Graphic file (type png)
-<use image012.png>
-Package pdftex.def Info: image012.png  used on input line 311. on input line 31
-1.
-Package pdftex.def Info: Requested size: 312.9803pt x 123.40161pt on input line
- 311.
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 319--319
+ [] 
+ []
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 311--311
+[24
+
+ <./image007.png>]
+<image008.png, id=838, 990.099pt x 433.62pt>
+File: image008.png Graphic file (type png)
+<use image008.png>
+Package pdftex.def Info: image008.png  used on input line 330. on input line 33
+0.
+Package pdftex.def Info: Requested size: 312.9803pt x 137.06741pt on input line
+ 330.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 330--330
  [] 
  []
 
 [25
 
- <./image012.png>]
-<image011.png, id=867, 689.4558pt x 275.3487pt>
-File: image011.png Graphic file (type png)
-<use image011.png>
-Package pdftex.def Info: image011.png  used on input line 323. on input line 32
-3.
-Package pdftex.def Info: Requested size: 312.9803pt x 124.99814pt on input line
- 323.
+ <./image008.png>] [26
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 323--323
+]
+<image012.png, id=894, 731.3724pt x 288.3573pt>
+File: image012.png Graphic file (type png)
+<use image012.png>
+Package pdftex.def Info: image012.png  used on input line 352. on input line 35
+2.
+Package pdftex.def Info: Requested size: 312.9803pt x 123.40161pt on input line
+ 352.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 352--352
  [] 
  []
 
-[26
+[27
 
- <./image011.png>] [27
+ <./image012.png>]
+<image011.png, id=923, 689.4558pt x 275.3487pt>
+File: image011.png Graphic file (type png)
+<use image011.png>
+Package pdftex.def Info: image011.png  used on input line 364. on input line 36
+4.
+Package pdftex.def Info: Requested size: 312.9803pt x 124.99814pt on input line
+ 364.
 
-]
-<image009.png, id=921, 727.0362pt x 291.9708pt>
-File: image009.png Graphic file (type png)
-<use image009.png>
-Package pdftex.def Info: image009.png  used on input line 353. on input line 35
-3.
-Package pdftex.def Info: Requested size: 312.9803pt x 125.68755pt on input line
- 353.
-
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 353--353
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 364--364
  [] 
  []
 
 [28
 
- <./image009.png>] (Slides_CSC_4IM01_TP.toc) [29
+ <./image011.png>] [29
 
-] [30
+]
+<image009.png, id=977, 727.0362pt x 291.9708pt>
+File: image009.png Graphic file (type png)
+<use image009.png>
+Package pdftex.def Info: image009.png  used on input line 394. on input line 39
+4.
+Package pdftex.def Info: Requested size: 312.9803pt x 125.68755pt on input line
+ 394.
 
-] [31
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 394--394
+ [] 
+ []
+
+[30
+
+ <./image009.png>] (Slides_CSC_4IM01_TP.toc) [31
 
 ] [32
 
 ] [33
 
-]
-[34
+] [34
 
 ] [35
 
-] [36
+]
+[36
 
 ] [37
 
+] [38
+
+] [39
+
 ]
-<image001.png, id=1202, 938.7873pt x 473.3685pt>
+<image001.png, id=1258, 938.7873pt x 473.3685pt>
 File: image001.png Graphic file (type png)
 <use image001.png>
-Package pdftex.def Info: image001.png  used on input line 492. on input line 49
-2.
+Package pdftex.def Info: image001.png  used on input line 533. on input line 53
+3.
 Package pdftex.def Info: Requested size: 312.9803pt x 157.8156pt on input line 
-492.
+533.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 492--492
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 533--533
  [] 
  []
 
-[38
+[40
 
  <./image001.png>]
-<image002.png, id=1231, 789.9111pt x 288.3573pt>
+<image002.png, id=1287, 789.9111pt x 288.3573pt>
 File: image002.png Graphic file (type png)
 <use image002.png>
-Package pdftex.def Info: image002.png  used on input line 504. on input line 50
-4.
+Package pdftex.def Info: image002.png  used on input line 545. on input line 54
+5.
 Package pdftex.def Info: Requested size: 312.9803pt x 114.24968pt on input line
- 504.
+ 545.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 504--504
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 545--545
  [] 
  []
-
-[39
-
- <./image002.png>] [40
-
-]
-<image003.png, id=1285, 788.4657pt x 296.307pt>
-File: image003.png Graphic file (type png)
-<use image003.png>
-Package pdftex.def Info: image003.png  used on input line 521. on input line 52
-1.
-Package pdftex.def Info: Requested size: 312.9803pt x 117.62096pt on input line
- 521.
-
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 521--521
- [] 
- []
-
-
-LaTeX Warning: Command \l invalid in math mode on input line 521.
-
-
-LaTeX Warning: Command \l invalid in math mode on input line 521.
 
 [41
 
- <./image003.png>] [42
+ <./image002.png>] [42
+
+]
+<image003.png, id=1341, 788.4657pt x 296.307pt>
+File: image003.png Graphic file (type png)
+<use image003.png>
+Package pdftex.def Info: image003.png  used on input line 562. on input line 56
+2.
+Package pdftex.def Info: Requested size: 312.9803pt x 117.62096pt on input line
+ 562.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 562--562
+ [] 
+ []
+
+
+LaTeX Warning: Command \l invalid in math mode on input line 562.
+
+
+LaTeX Warning: Command \l invalid in math mode on input line 562.
+
+[43
+
+ <./image003.png>] [44
 
 ]
 \tf@nav=\write7
@@ -2246,23 +2268,23 @@ LaTeX Warning: Command \l invalid in math mode on input line 521.
 
  
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 528.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 569.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 569.
 (Slides_CSC_4IM01_TP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 569.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 569.
 Package rerunfilecheck Info: File `Slides_CSC_4IM01_TP.out' has not changed.
-(rerunfilecheck)             Checksum: C31AAB452AC316041C3653B1F4AC6658;1334.
+(rerunfilecheck)             Checksum: 2DE4219DE0BB8678E51CF7223E7E0535;1338.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 35451 strings out of 493314
- 712546 string characters out of 3138866
- 864589 words of memory out of 3000000
- 38214 multiletter control sequences out of 15000+200000
+ 35473 strings out of 493314
+ 712800 string characters out of 3138866
+ 864949 words of memory out of 3000000
+ 38228 multiletter control sequences out of 15000+200000
  541787 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,16n,96p,10393b,826s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2284,9 +2306,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX
 blic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/symbols/msbm7.pfb>
-Output written on Slides_CSC_4IM01_TP.pdf (42 pages, 8584198 bytes).
+Output written on Slides_CSC_4IM01_TP.pdf (44 pages, 10351760 bytes).
 PDF statistics:
- 1426 PDF objects out of 1440 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1484 PDF objects out of 1728 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
